@@ -9,6 +9,7 @@ import CallToAction from "./components/CallToAction";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
 import ogimage from "./assets/ogimage.png";
+import { ColorModeSwitcher } from "./ColorModeSwitcher";
 // import { useEffect } from "react";
 
 const config: ThemeConfig = {
@@ -32,6 +33,7 @@ export const App = () => {
       </Helmet>
       <ChakraProvider theme={theme}>
         <Box textAlign="center" fontSize="xl">
+          {false && <ColorModeSwitcher />}
           <Navbar />
           <CallToAction />
         </Box>
