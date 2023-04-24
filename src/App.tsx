@@ -3,6 +3,7 @@ import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import CallToAction from "./components/CallToAction";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
+import ogimage from "./assets/ogimage.png";
 
 const theme = extendTheme({
   initialColorMode: "dark",
@@ -11,7 +12,9 @@ const theme = extendTheme({
 
 export const App = () => (
   <>
-    <Helmet></Helmet>
+    <Helmet>
+      <meta property="og:image" content={ogimage} />
+    </Helmet>
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Navbar />
