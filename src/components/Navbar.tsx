@@ -1,15 +1,12 @@
-import { EmailIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { EmailIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
   ButtonGroup,
-  Container,
   Flex,
   HStack,
-  Text,
   IconButton,
   Image,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
