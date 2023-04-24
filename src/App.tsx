@@ -19,12 +19,12 @@ const config: ThemeConfig = {
 const theme = extendTheme({ config });
 
 export const App = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  useEffect(() => {
-    if (colorMode === "light") {
-      toggleColorMode();
-    }
-  }, [colorMode, toggleColorMode]);
+  // const { colorMode, toggleColorMode } = useColorMode();
+  // useEffect(() => {
+  //   if (colorMode === "light") {
+  //     toggleColorMode();
+  //   }
+  // }, [colorMode, toggleColorMode]);
   return (
     <>
       <Helmet>
