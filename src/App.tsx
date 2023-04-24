@@ -21,7 +21,7 @@ export const App = () => {
     if (colorMode === "light") {
       toggleColorMode();
     }
-  }, []);
+  }, [colorMode, toggleColorMode]);
   return (
     <>
       <Helmet>
