@@ -1,38 +1,22 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import { ChakraProvider, Box, Grid, extendTheme } from "@chakra-ui/react";
+import { ColorModeSwitcher } from "./ColorModeSwitcher";
+import CallToAction from "./components/CallToAction";
+import { Helmet } from "react-helmet";
+import Navbar from "./components/Navbar";
+
+const theme = extendTheme({
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+});
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
-  </ChakraProvider>
-)
+  <>
+    <Helmet></Helmet>
+    <ChakraProvider theme={theme}>
+      <Box textAlign="center" fontSize="xl">
+        <Navbar />
+        <CallToAction />
+      </Box>
+    </ChakraProvider>
+  </>
+);
