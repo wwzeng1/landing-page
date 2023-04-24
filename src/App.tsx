@@ -3,6 +3,7 @@ import {
   Box,
   extendTheme,
   useColorMode,
+  ThemeConfig,
 } from "@chakra-ui/react";
 import CallToAction from "./components/CallToAction";
 import { Helmet } from "react-helmet";
@@ -10,10 +11,12 @@ import Navbar from "./components/Navbar";
 import ogimage from "./assets/ogimage.png";
 import { useEffect } from "react";
 
-const theme = extendTheme({
-  initialColorMode: "dark",
+const config: ThemeConfig = {
+  initialColorMode: "light",
   useSystemColorMode: false,
-});
+};
+
+const theme = extendTheme({ config });
 
 export const App = () => {
   const { colorMode, toggleColorMode } = useColorMode();
