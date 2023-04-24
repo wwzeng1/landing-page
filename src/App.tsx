@@ -12,7 +12,7 @@ import ogimage from "./assets/ogimage.png";
 import { useEffect } from "react";
 
 const config: ThemeConfig = {
-  initialColorMode: "light",
+  initialColorMode: "dark",
   useSystemColorMode: false,
 };
 
