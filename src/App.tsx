@@ -1,4 +1,9 @@
-import { ChakraProvider, Box, extendTheme } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  Box,
+  extendTheme,
+  useColorMode,
+} from "@chakra-ui/react";
 import CallToAction from "./components/CallToAction";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
