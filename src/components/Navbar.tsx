@@ -11,7 +11,7 @@ import {
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
-export default () => {
+export default function NavBar() {
   return (
     <Box as="nav" bg="bg-surface" boxShadow="sm" width="full" p={4}>
       <HStack spacing="10" justify="space-between">
@@ -50,4 +50,4 @@ export default () => {
       </HStack>
     </Box>
   );
-};
+}
