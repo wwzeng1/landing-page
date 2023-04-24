@@ -2,14 +2,14 @@ import {
   ChakraProvider,
   Box,
   extendTheme,
-  useColorMode,
+  // useColorMode,
   ThemeConfig,
 } from "@chakra-ui/react";
 import CallToAction from "./components/CallToAction";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
 import ogimage from "./assets/ogimage.png";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
