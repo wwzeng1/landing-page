@@ -8,7 +8,7 @@ import {
   IconButton,
   Image,
 } from "@chakra-ui/react";
-import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
 export default function NavBar() {
@@ -35,6 +35,14 @@ export default function NavBar() {
               aria-label="Open Menu"
               onClick={() => {
                 document.location.href = "https://github.com/sweepai";
+              }}
+            />
+            <IconButton
+              variant="ghost"
+              icon={<FaDiscord />}
+              aria-label="Open Menu"
+              onClick={() => {
+                document.location.href = "https://discord.gg/j8XxQmpHEF";
               }}
             />
             <IconButton
