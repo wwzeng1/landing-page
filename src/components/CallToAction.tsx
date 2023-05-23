@@ -45,7 +45,7 @@ export default function CallToAction() {
             _hover={{ bg: "purple.600" }}
             onClick={() => window.open("https://github.com/apps/sweep-ai")}
           >
-            Install now!
+            Install now
           </Button>
           {/* <Button rounded={'full'} px={6}>
                     Learn more

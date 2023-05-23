@@ -8,7 +8,7 @@ import {
   IconButton,
   Image,
 } from "@chakra-ui/react";
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaStripeS, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
 export default function NavBar() {
@@ -23,8 +23,17 @@ export default function NavBar() {
           <ButtonGroup variant="link">
             <IconButton
               variant="ghost"
+              icon={<FaStripeS />}
+              aria-label="Stripe"
+              onClick={() => {
+                document.location.href =
+                  "https://buy.stripe.com/bIY5npdP3etO2IMfYY";
+              }}
+            />
+            <IconButton
+              variant="ghost"
               icon={<FaTwitter />}
-              aria-label="Open Menu"
+              aria-label="Twitter"
               onClick={() => {
                 document.location.href = "https://twitter.com/sweep__ai";
               }}
@@ -32,7 +41,7 @@ export default function NavBar() {
             <IconButton
               variant="ghost"
               icon={<FaGithub />}
-              aria-label="Open Menu"
+              aria-label="Github"
               onClick={() => {
                 document.location.href = "https://github.com/sweepai";
               }}
@@ -40,7 +49,7 @@ export default function NavBar() {
             <IconButton
               variant="ghost"
               icon={<FaDiscord />}
-              aria-label="Open Menu"
+              aria-label="Discord"
               onClick={() => {
                 document.location.href = "https://discord.gg/j8XxQmpHEF";
               }}
@@ -48,7 +57,7 @@ export default function NavBar() {
             <IconButton
               variant="ghost"
               icon={<EmailIcon />}
-              aria-label="Open Menu"
+              aria-label="Email"
               onClick={() => {
                 document.location.href = "mailto:team@sweep.dev";
               }}
