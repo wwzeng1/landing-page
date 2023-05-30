@@ -8,7 +8,7 @@ import {
   IconButton,
   Image,
 } from "@chakra-ui/react";
-import { FaDiscord, FaGithub, FaStripeS, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaStripe, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
 export default function NavBar() {
@@ -23,7 +23,7 @@ export default function NavBar() {
           <ButtonGroup variant="link">
             <IconButton
               variant="ghost"
-              icon={<FaStripeS />}
+              icon={<FaStripe />}
               aria-label="Stripe"
               onClick={() => {
                 document.location.href =
