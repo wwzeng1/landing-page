@@ -38,7 +38,12 @@ export const App = () => {
       </Helmet>
       <ChakraProvider theme={theme}>
         <ForceDarkMode>
-          <Box textAlign="center" fontSize="xl">
+          <Box 
+            textAlign="center" 
+            fontSize="xl" 
+            // bgGradient="linear-gradient(to bottom, #111, #8989ba)"
+            bgGradient="linear-gradient(to bottom, #111, #322659)"
+          >
             {false && <ColorModeSwitcher />}
             <Navbar />
             <CallToAction />
