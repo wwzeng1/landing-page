@@ -23,15 +23,6 @@ export default function NavBar() {
           <ButtonGroup variant="link">
             <IconButton
               variant="ghost"
-              icon={<FaStripe />}
-              aria-label="Stripe"
-              onClick={() => {
-                document.location.href =
-                  "https://buy.stripe.com/7sI1793ap5Xi3MQ001";
-              }}
-            />
-            <IconButton
-              variant="ghost"
               icon={<FaTwitter />}
               aria-label="Twitter"
               onClick={() => {
@@ -60,6 +51,15 @@ export default function NavBar() {
               aria-label="Email"
               onClick={() => {
                 document.location.href = "mailto:team@sweep.dev";
+              }}
+            />
+            <IconButton
+              variant="ghost"
+              icon={<p>Sweep Pro</p>}
+              aria-label="Stripe"
+              onClick={() => {
+                document.location.href =
+                  "https://buy.stripe.com/7sI1793ap5Xi3MQ001";
               }}
             />
           </ButtonGroup>
