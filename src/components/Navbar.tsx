@@ -23,11 +23,11 @@ export default function NavBar() {
           <ButtonGroup variant="link">
             <IconButton
               variant="ghost"
-              icon={<FaStripe />}
+              icon={<FaStripe />}``
               aria-label="Stripe"
               onClick={() => {
                 document.location.href =
-                  "https://buy.stripe.com/bIY5npdP3etO2IMfYY";
+                  "https://buy.stripe.com/7sI1793ap5Xi3MQ001";
               }}
             />
             <IconButton
