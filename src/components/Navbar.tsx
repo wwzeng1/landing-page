@@ -8,7 +8,7 @@ import {
   IconButton,
   Image,
 } from "@chakra-ui/react";
-import { FaDiscord, FaGithub, FaStripe, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
 export default function NavBar() {
