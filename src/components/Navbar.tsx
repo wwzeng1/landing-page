@@ -55,7 +55,7 @@ export default function NavBar() {
             />
             <IconButton
               variant="ghost"
-              icon={<p>Sweep Pro</p>}
+              icon={<p>Buy Sweep Pro</p>}
               aria-label="Stripe"
               onClick={() => {
                 document.location.href =
