@@ -28,7 +28,6 @@ const Testimonial = ({ children, name, company, href }: TestimonialProps) : JSX.
             p={4} 
             mb={4} 
             width={{base: "100%", md: "30%"}}
-            // backgroundImage="radial-gradient(120px, rgba(137, 207, 240, 0.2), rgba(0, 0, 0, 0))"
         >
             <Text 
                 fontSize="lg" 
@@ -49,14 +48,14 @@ export default function Testimonials() {
                 <Text fontSize="5xl" fontWeight="bold" mb={8} textAlign="center">What our users are saying</Text>
                 <Box display="flex" flexWrap="wrap" justifyContent="space-between">
                     <Testimonial name="Jeremy Evans" company="savvy" href="https://trysavvy.com/">
-                        Holy crap, I'm seriously impressed 🤯 Other than one issue it seems to be word-perfect. Exactly how I'd write it, and it understands all our company-specific concepts. Very impressive! 🙌
+                        Holy crap, I'm <b>seriously impressed</b> 🤯. Other than one issue it seems to be <b>word-perfect</b>. Exactly how I'd write it, and it understands all our <b>company-specific concepts</b>. Very impressive! 🙌
                     </Testimonial>
                     <Testimonial name="Eduardo Reis" company="Plug 'n Plai" href="https://plugnplai.com">
-                        ✨Wow! Just found sweep.dev from <ExternalLinkWithText href="https://twitter.com/wwzeng1">@wwzeng1</ExternalLinkWithText> <ExternalLinkWithText href="https://twitter.com/KevinLu45010771">@KevinLu45010771</ExternalLinkWithText>. It wrote these two PRs for <ExternalLinkWithText href="https://github.com/edreisMD/plugnplai/pull/91">edreisMD/plugnplai#91</ExternalLinkWithText> <ExternalLinkWithText href="https://github.com/edreisMD/plugnplai/pull/75">edreisMD/plugnplai#75</ExternalLinkWithText>.
-                        Total lifesaver 🙌. Sweep just saved me 6 hours of work.
+                        ✨Wow! Just found sweep.dev from <ExternalLinkWithText href="https://twitter.com/wwzeng1">@wwzeng1</ExternalLinkWithText> <ExternalLinkWithText href="https://twitter.com/KevinLu45010771">@KevinLu45010771</ExternalLinkWithText>. It wrote these two PRs for <ExternalLinkWithText href="https://github.com/edreisMD/plugnplai/pull/91">edreisMD/plugnplai#91</ExternalLinkWithText> <ExternalLinkWithText href="https://github.com/edreisMD/plugnplai/pull/75">edreisMD/plugnplai#75</ExternalLinkWithText>
+                        <b>Total lifesaver</b> 🙌. Sweep just saved me <b>6 hours of work</b>.
                     </Testimonial>
                     <Testimonial name="Kunal Gupta" company="withfriends" href="https://withfriends.co/">
-                        Using this, it’s pretty cool. It’s a little bit like having a junior intern, which doesn’t sound like a lot at first, but you can run like 100 junior interns at once and they can cover a lot of ground in parallel.
+                        Using this, it’s pretty cool. It’s a little bit like having a junior intern, which doesn’t sound like a lot at first, but you can run like <b>100 junior interns</b> at once and they can cover a <b>lot of ground</b> in parallel.
                     </Testimonial>
                 </Box>
             </Box>
