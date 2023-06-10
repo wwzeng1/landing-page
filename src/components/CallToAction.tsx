@@ -10,7 +10,7 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 // @ts-ignore
 import { Terminal } from "react-window-ui";
-import { FaDiscord } from "react-icons/fa";
+import { FaBook, FaDiscord, FaRocket } from "react-icons/fa";
 const demo = require("../assets/demo.mov");
 
 export default function CallToAction() {
@@ -47,7 +47,7 @@ export default function CallToAction() {
             _hover={{ bg: "purple.600" }}
             onClick={() => window.open("https://github.com/apps/sweep-ai")}
           >
-            Install now
+            <FaRocket />&nbsp;&nbsp;Install Sweep
           </Button>
           <Button
             rounded={"full"}
@@ -58,7 +58,18 @@ export default function CallToAction() {
             _hover={{ bg: "#5b6eab" }}
             onClick={() => window.open("https://discord.gg/j8XxQmpHEF")}
           >
-            <FaDiscord />&nbsp;&nbsp;Join the Community
+            <FaDiscord />&nbsp;&nbsp;Join Discord
+          </Button>
+          <Button
+            rounded={"full"}
+            color="white"
+            px={6}
+            colorScheme={"grey"}
+            bg={"grey"}
+            _hover={{ bg: "#5c5c5c" }}
+            onClick={() => window.open("https://sweep-ai.notion.site/Getting-started-with-Sweep-55f0155f610141139a15a9e448fd3ee2?pvs=4")}
+          >
+            <FaBook />&nbsp;&nbsp;Read Docs
           </Button>
         </HStack>
         <Flex w={"full"}>
@@ -66,7 +77,7 @@ export default function CallToAction() {
             padding="2rem 0 0 0" 
             topbarColor="#0e1018" 
             divider="none"
-            boxShadow="0 0 40px #444"
+            boxShadow="0 0 80px #444"
           >
             <video src={demo} autoPlay muted loop>
               Your browser does not support the video tag.

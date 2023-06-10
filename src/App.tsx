@@ -11,6 +11,8 @@ import Navbar from "./components/Navbar";
 import ogimage from "./assets/ogimage.png";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { useEffect } from "react";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -41,12 +43,15 @@ export const App = () => {
           <Box 
             textAlign="center" 
             fontSize="xl" 
-            bgGradient="linear-gradient(to bottom, #111, #322659)"
+            bgGradient="radial-gradient(circle at 50% 75%, #322659, #111)"
             minH="100vh"
+            backgroundAttachment="fixed"
           >
             {false && <ColorModeSwitcher />}
             <Navbar />
             <CallToAction />
+            <Testimonials />
+            <Footer />
           </Box>
         </ForceDarkMode>
       </ChakraProvider>

@@ -8,7 +8,7 @@ import {
   IconButton,
   Image,
 } from "@chakra-ui/react";
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
 export default function NavBar() {
@@ -43,6 +43,14 @@ export default function NavBar() {
               aria-label="Discord"
               onClick={() => {
                 document.location.href = "https://discord.gg/j8XxQmpHEF";
+              }}
+            />
+            <IconButton
+              variant="ghost"
+              icon={<FaBook />}
+              aria-label="Docs"
+              onClick={() => {
+                document.location.href = "https://sweep-ai.notion.site/Getting-started-with-Sweep-55f0155f610141139a15a9e448fd3ee2?pvs=4";
               }}
             />
             <IconButton
