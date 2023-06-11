@@ -67,7 +67,7 @@ export default function CallToAction() {
             colorScheme={"grey"}
             bg={"grey"}
             _hover={{ bg: "#5c5c5c" }}
-            onClick={() => window.open("https://sweep-ai.notion.site/Getting-started-with-Sweep-55f0155f610141139a15a9e448fd3ee2?pvs=4")}
+            onClick={() => window.open("https://docs.sweep.dev/start")}
           >
             <FaBook />&nbsp;&nbsp;Read Docs
           </Button>

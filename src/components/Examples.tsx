@@ -223,7 +223,7 @@ export default function Examples() {
                 </Box>
             </Box>
             <Text mb={16}>
-                For more examples, see <ExternalLinkWithText href="https://sweep-ai.notion.site/Example-Sweep-tickets-238f7c88fe3e4153bdea137de30ee7c1?pvs=4">Example Sweep tickets</ExternalLinkWithText>
+                For more examples, see <ExternalLinkWithText href="https://docs.sweep.dev/examples">Example Sweep tickets</ExternalLinkWithText>
             </Text>
         </>
     );

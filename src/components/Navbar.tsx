@@ -50,7 +50,7 @@ export default function NavBar() {
               icon={<FaBook />}
               aria-label="Docs"
               onClick={() => {
-                document.location.href = "https://sweep-ai.notion.site/Getting-started-with-Sweep-55f0155f610141139a15a9e448fd3ee2?pvs=4";
+                document.location.href = "https://docs.sweep.dev/start";
               }}
             />
             <IconButton
