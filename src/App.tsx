@@ -13,6 +13,8 @@ import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { useEffect } from "react";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
+import Examples from "./components/Examples";
+import Users from "./components/Users";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -50,7 +52,9 @@ export const App = () => {
             {false && <ColorModeSwitcher />}
             <Navbar />
             <CallToAction />
+            <Examples />
             <Testimonials />
+            {/* <Users /> */}
             <Footer />
           </Box>
         </ForceDarkMode>

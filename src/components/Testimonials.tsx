@@ -44,8 +44,8 @@ const Testimonial = ({ children, name, company, href }: TestimonialProps) : JSX.
 export default function Testimonials() {
     return (
         <Box display="flex" justifyContent="center" alignItems="center">
-            <Box m={8} mb={16} width={{base: "100%", md: "80%"}}>
-                <Text fontSize="5xl" fontWeight="bold" mb={8} textAlign="center">What our users are saying</Text>
+            <Box m={8} mt={32} mb={64} width={{base: "100%", md: "80%"}}>
+                <Text fontSize="5xl" fontWeight="bold" mb={16} textAlign="center">What our users are saying</Text>
                 <Box display="flex" flexWrap="wrap" justifyContent="space-between">
                     <Testimonial name="Jeremy Evans" company="savvy" href="https://trysavvy.com/">
                         Holy crap, I'm <b>seriously impressed</b> 🤯. Other than one issue it seems to be <b>word-perfect</b>. Exactly how I'd write it, and it understands all our <b>company-specific concepts</b>. Very impressive! 🙌
