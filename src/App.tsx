@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import Examples from "./components/Examples";
-// import Users from "./components/Users";
+import Users from "./components/Users";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -54,7 +54,7 @@ export const App = () => {
             <CallToAction />
             <Examples />
             <Testimonials />
-            {/* <Users /> */}
+            <Users />
             <Footer />
           </Box>
         </ForceDarkMode>

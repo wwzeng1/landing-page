@@ -1,21 +1,8 @@
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Box, Link, LinkProps, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
-type ExternalLinkWithTextProps = {
-    children: React.ReactNode,
-    href: string
-    includeIcon?: boolean
-} & LinkProps;
-
-const ExternalLinkWithText = ({ children, href, includeIcon = true, ...rest }: ExternalLinkWithTextProps) : JSX.Element  => {
-    return (
-        <Link href={href} isExternal {...rest}>
-            {children}{includeIcon && <>&nbsp;<ExternalLinkIcon /></>}
-        </Link>
-    );
-}
+import ExternalLinkWithText from "./ExternalLinkWithText";
 
 type CommentHeaderProps = {
     src: string,
@@ -173,7 +160,7 @@ export default function Examples() {
         <>
             <Box display="flex" justifyContent="center" alignItems="center">
                 <Box m={8} mt={32} width={{base: "100%", md: "80%"}}>
-                    <Text fontSize="5xl" fontWeight="bold" mb={16} textAlign="center">Example tickets handled by Sweep</Text>
+                    <Text fontSize="5xl" fontWeight="bold" mb={12} textAlign="center">Example tickets handled by Sweep</Text>
                     <Box display="flex" flexWrap="wrap" justifyContent="space-between">
                         <Example
                             repo_name="edreisMD/plugnplai"
