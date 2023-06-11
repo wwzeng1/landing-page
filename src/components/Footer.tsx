@@ -11,7 +11,7 @@ export default function Footer() {
         <Link href="https://sweep-ai.notion.site/Getting-started-with-Sweep-55f0155f610141139a15a9e448fd3ee2?pvs=4">Docs</Link>
         <Link href="https://buy.stripe.com/7sI1793ap5Xi3MQ001">Sweep Pro</Link>
 
-        <Link href="https://www.ycombinator.com/" target="_blank" rel="noopener noreferrer" display="inline-flex" alignItems="center">
+        <Link href="https://ycombinator.com/companies/sweep" target="_blank" rel="noopener noreferrer" display="inline-flex" alignItems="center">
             Backed by <img src={YCLogo} alt="Y Combinator" style={{marginLeft: "10px"}} height="10px" />
         </Link>
       </Stack>
