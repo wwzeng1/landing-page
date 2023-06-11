@@ -122,6 +122,7 @@ const Example = ({
             overflow="hidden" 
             p={4} 
             width={{base: "100%", md: "30%"}}
+            mb={8}
         >
             <Text 
                 fontSize="lg" 
