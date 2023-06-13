@@ -17,8 +17,10 @@ export default function NavBar() {
       <HStack spacing="10" justify="space-between">
         <Flex justify="space-between" flex="1">
           <HStack>
-            <Image src={logo} alt="logo" width={10} borderRadius={12} />
-            <Button variant="ghost">Sweep AI</Button>
+            <Button variant="ghost">
+              <Image src={logo} alt="logo" width={10} borderRadius={12} />
+              Sweep AI
+            </Button>
           </HStack>
           <ButtonGroup variant="link">
             <IconButton
