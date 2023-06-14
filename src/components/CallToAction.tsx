@@ -9,9 +9,9 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 // @ts-ignore
-import { Terminal } from "react-window-ui";
+// import { Terminal } from "react-window-ui";
 import { FaBook, FaDiscord, FaRocket } from "react-icons/fa";
-const demo = require("../assets/demo.mov");
+const demo = require("../assets/demo.mp4");
 
 export default function CallToAction() {
   return (
@@ -73,16 +73,12 @@ export default function CallToAction() {
           </Button>
         </HStack>
         <Flex w={"full"}>
-          <Terminal 
-            padding="2rem 0 0 0" 
-            topbarColor="#0e1018" 
-            divider="none"
-            boxShadow="0 0 80px #444"
-          >
+            {/* boxShadow="0 0 80px #444" */}
+          <Container width="100vw" boxShadow="0 0 80px #444" p={0} maxWidth="full">
             <video src={demo} autoPlay muted loop>
               Your browser does not support the video tag.
             </video>
-          </Terminal>
+          </Container>
         </Flex>
       </Stack>
     </Container>
