@@ -5,7 +5,6 @@ import {
   Stack,
   Text,
   Button,
-  HStack,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 // @ts-ignore

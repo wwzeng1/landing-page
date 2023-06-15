@@ -17,7 +17,7 @@ import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 
 export default function NavBar() {
-  
+
   const listDisplay = useBreakpointValue({ base: "none", lg: "flex" });
   const menuDisplay = useBreakpointValue({ base: "flex", lg: "none" });
   const navItems = [
@@ -65,8 +65,8 @@ export default function NavBar() {
           </HStack>
           <ButtonGroup variant="link" display={listDisplay}>
             {navItems.map((item) => (
-              <IconButton 
-                key={item.label} 
+              <IconButton
+                key={item.label}
                 icon={item.icon}
                 variant="ghost"
                 aria-label={item.label}
@@ -91,9 +91,9 @@ export default function NavBar() {
                 <MenuItem backgroundColor="#333">
                   {item.label}
                   {
-                    item.label != "Buy Sweep Pro" &&
+                    item.label !== "Buy Sweep Pro" &&
                     <IconButton
-                      key={item.label} 
+                      key={item.label}
                       icon={item.icon}
                       variant="ghost"
                       aria-label={item.label}
