@@ -17,16 +17,17 @@ export default function Users() {
     return (
         <>
             <Text fontSize="5xl" mb={12}>
-                Used by engineers and scholars from
+                Used by engineers from
             </Text>
-            <HStack spacing={4} justifyContent="center" mb={48}>
+            <HStack spacing={4} justifyContent="center" mb={48} flexWrap="wrap" p={{base: 16, md: "initial"}}>
                 {data.map(({ logo, href }) => (
                     <Link href={href} isExternal key={logo}>
                         <Image 
                             src={logo} 
                             alt="placeholder" 
-                            mx={4} 
-                            width={200} 
+                            mx={4}
+                            width={{base: "100%", md: "100px"}} 
+                            mb={{base: 8, md: 0}}
                             filter="grayscale(100%) invert(1)" 
                             transition="filter 0.3s linear" 
                             _hover={{ filter: "none" }}
@@ -34,6 +35,7 @@ export default function Users() {
                     </Link>
                 ))}
             </HStack>
+
         </>
     )
 }
