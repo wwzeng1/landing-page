@@ -75,9 +75,8 @@ export default function CallToAction() {
         </Stack>
 
         <Flex w={"full"}>
-          {/* boxShadow="0 0 80px #444" */}
           <Container width="100vw" boxShadow="0 0 80px #444" p={0} maxWidth="full">
-            <video src={demo} autoPlay muted loop>
+            <video src={demo} autoPlay muted loop playsInline>
               Your browser does not support the video tag.
             </video>
           </Container>
