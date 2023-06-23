@@ -1,0 +1,29 @@
+<svg width="1920" height="1193" viewBox="0 0 1920 1193" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="978" cy="3.5" rx="1377" ry="571.5" fill="url(#paint0_radial_341_815)"/>
+<rect x="2103.94" y="1192.27" width="910" height="291" rx="145.5" transform="rotate(-158.033 2103.94 1192.27)" fill="url(#paint1_radial_341_815)"/>
+<rect x="1726" y="616" width="521" height="291" rx="145.5" transform="rotate(180 1726 616)" fill="url(#paint2_radial_341_815)"/>
+<rect x="1358.33" y="-3.43506" width="583.562" height="326.239" rx="163.119" transform="rotate(135 1358.33 -3.43506)" fill="url(#paint3_radial_341_815)"/>
+<rect x="-53.9999" y="965" width="808" height="452" rx="226" transform="rotate(-90 -53.9999 965)" fill="url(#paint4_radial_341_815)"/>
+<defs>
+<radialGradient id="paint0_radial_341_815" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(978 3.5) rotate(90) scale(674.5 1625.17)">
+<stop stop-color="#382A65"/>
+<stop offset="1" stop-color="#0D0A1A" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_341_815" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(2392.13 642.773) rotate(72.6348) scale(895.521 2632.63)">
+<stop stop-color="#9F7AEA"/>
+<stop offset="0.868563" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_341_815" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1986 -61.4999) rotate(86.6209) scale(984.416 1762.41)">
+<stop stop-color="#9F7AEA"/>
+<stop offset="0.868563" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint3_radial_341_815" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1135.77 -598.542) rotate(42.4013) scale(1003.53 1795.08)">
+<stop stop-color="#9F7AEA"/>
+<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint4_radial_341_815" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(846 -14) rotate(105.64) scale(1508.93 2698.33)">
+<stop stop-color="#9B9EF2"/>
+<stop offset="0.868563" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

@@ -16,6 +16,8 @@ import Footer from "./components/Footer";
 import Examples from "./components/Examples";
 import Users from "./components/Users";
 
+import circles from "./assets/circles.svg";
+
 const config: ThemeConfig = {
   initialColorMode: "dark",
   useSystemColorMode: false,
@@ -42,12 +44,17 @@ export const App = () => {
       </Helmet>
       <ChakraProvider theme={theme}>
         <ForceDarkMode>
-          <Box 
-            textAlign="center" 
-            fontSize="xl" 
-            bgGradient="radial-gradient(circle at 50% 75%, #322659, #111)"
+          <Box
+            textAlign="center"
+            fontSize="xl"
+            bgColor="#0d0a1a"
+            // bgGradient="radial-gradient(ellipse at top, #382A65, transparent)"
+            bgImage={circles}
+            bgPos="0 0"
+            bgSize="100%"
             minH="100vh"
-            backgroundAttachment="fixed"
+            bgRepeat="no-repeat"
+          // backgroundAttachment="fixed"
           >
             {false && <ColorModeSwitcher />}
             <Navbar />
