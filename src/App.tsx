@@ -17,6 +17,8 @@ import Examples from "./components/Examples";
 import Users from "./components/Users";
 
 import circles from "./assets/circles.svg";
+import Features from "./components/Features";
+import Conclusion from "./components/Conclusion";
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
@@ -48,21 +50,20 @@ export const App = () => {
             textAlign="center"
             fontSize="xl"
             bgColor="#0d0a1a"
-            // bgGradient="radial-gradient(ellipse at top, #382A65, transparent)"
             bgImage={circles}
             bgPos="0 0"
             bgSize="100%"
             minH="100vh"
             bgRepeat="no-repeat"
-          // backgroundAttachment="fixed"
+            overflowX="hidden"
           >
             {false && <ColorModeSwitcher />}
             <Navbar />
             <CallToAction />
-            <Examples />
-            <Testimonials />
             <Users />
-            <Footer />
+            <Features />
+            <Testimonials />
+            <Conclusion />
           </Box>
         </ForceDarkMode>
       </ChakraProvider>
