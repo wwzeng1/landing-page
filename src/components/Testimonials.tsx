@@ -23,7 +23,7 @@ const Testimonial = ({ children, name, company, href }: TestimonialProps): JSX.E
             borderWidth={1}
         >
             <Flex width="100%" m={2} mb={4}>
-                <User><Text color="white">JE</Text></User>
+                <User><Text color="white">{name.split(' ').map(n => n[0]).join('').toUpperCase()}</Text></User>
                 <Box flexGrow={1} textAlign="left" ml={4}>
                     <Text fontWeight="bold">{name}</Text>
                     <ExternalLinkWithText href={href} color="#aaa">{company}</ExternalLinkWithText>
