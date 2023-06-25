@@ -49,7 +49,7 @@ export default function NavBar() {
     {
       label: "Buy Sweep Pro",
       icon: <p>Buy Sweep Pro</p>,
-link: "https://buy.stripe.com/6oEg237qFbhC1EI3ce",
+      link: "https://buy.stripe.com/14k2bd26l85q4QUeUX",
     },
   ];
 
