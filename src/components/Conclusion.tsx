@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-import { FaBook, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import logo from "../assets/icon.png";
 import pills_bottom from "../assets/pills_bottom.svg";
 import Footer from "./Footer";

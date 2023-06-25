@@ -9,7 +9,7 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 // @ts-ignore
 // import { Terminal } from "react-window-ui";
-import { FaBook, FaDiscord, FaGithub, FaRocket } from "react-icons/fa";
+import { FaDiscord, FaGithub } from "react-icons/fa";
 
 import logo from "../assets/icon.png";
 import ExternalLinkWithText from "./ExternalLinkWithText";

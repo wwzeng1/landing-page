@@ -1,7 +1,7 @@
 import { Box, Button, Code, Flex, HStack, Text, VStack } from "@chakra-ui/react";
-import { FaBook, FaGithub, FaSlack, FaTicketAlt } from "react-icons/fa";
+import { FaBook, FaGithub, FaSlack } from "react-icons/fa";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'; // @ts-ignore
-import { materialDark, oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import logo from "../assets/icon.png";
 import pills_examples from "../assets/pills_examples.svg";
