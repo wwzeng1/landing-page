@@ -9,7 +9,7 @@ export default function Footer() {
         <Link href="https://github.com/sweepai" textAlign={{ base: "center", md: "left" }}>Github</Link>
         <Link href="https://discord.gg/j8XxQmpHEF" textAlign={{ base: "center", md: "left" }}>Discord</Link>
         <Link href="https://docs.sweep.dev/start" textAlign={{ base: "center", md: "left" }}>Docs</Link>
-        <Link href="https://buy.stripe.com/7sI1793ap5Xi3MQ001" textAlign={{ base: "center", md: "left" }}>Sweep Pro</Link>
+        <Link href="https://buy.stripe.com/14k2bd26l85q4QUeUX" textAlign={{ base: "center", md: "left" }}>Sweep Pro</Link>
         <Link href="https://ycombinator.com/companies/sweep" target="_blank" rel="noopener noreferrer" display="inline-flex" alignItems="center" textAlign={{ base: "center", md: "left" }}>
           Backed by <img src={YCLogo} alt="Y Combinator" style={{ marginLeft: "10px" }} height="10px" />
         </Link>
@@ -17,5 +17,3 @@ export default function Footer() {
     </Box>
   );
 };
-
-
