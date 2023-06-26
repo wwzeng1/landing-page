@@ -15,9 +15,6 @@ export default function Conclusion() {
                     <Button colorScheme="purple" size="md" mt={4} onClick={() => window.open("https://github.com/apps/sweep-ai")}>
                         <FaGithub />&nbsp;&nbsp;Get Started
                     </Button>
-                    <Button colorScheme="purple" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/examples")}>
-                        <FaGithub />&nbsp;&nbsp;Get Started
-                    </Button>
                 </Box>
             </Flex>
             <Footer />
