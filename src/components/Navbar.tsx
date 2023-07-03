@@ -71,7 +71,7 @@ export default function NavBar() {
                 variant="ghost"
                 aria-label={item.label}
                 onClick={() => {
-                  document.location.href = item.link;
+                  window.open(item.link, "_blank");
                 }}
               />
             ))}
