@@ -77,6 +77,15 @@ export default function NavBar() {
             ))}
           </ButtonGroup>
           <Menu>
+            <IconButton
+              key={"Sweep Pro"}
+              icon={<p>Buy Sweep Pro</p>}
+              variant="ghost"
+              aria-label={"Sweep Pro"}
+              onClick={() => {
+                window.open("https://buy.stripe.com/14k2bd26l85q4QUeUX", "_blank");
+              }}
+            />
             <MenuButton
               as={IconButton}
               aria-label='Options'
