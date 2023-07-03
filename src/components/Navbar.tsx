@@ -85,6 +85,8 @@ export default function NavBar() {
               onClick={() => {
                 window.open("https://buy.stripe.com/14k2bd26l85q4QUeUX", "_blank");
               }}
+              px={2}
+              display={menuDisplay}
             />
             <MenuButton
               as={IconButton}
