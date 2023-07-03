@@ -73,13 +73,14 @@ export default function NavBar() {
                 onClick={() => {
                   window.open(item.link, "_blank");
                 }}
+                px={2}
               />
             ))}
           </ButtonGroup>
           <Menu>
             <IconButton
               key={"Sweep Pro"}
-              icon={<p>Buy Sweep Pro</p>}
+              icon={<p>Sweep Pro</p>}
               variant="ghost"
               aria-label={"Sweep Pro"}
               onClick={() => {
