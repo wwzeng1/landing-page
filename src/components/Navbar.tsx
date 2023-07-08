@@ -22,6 +22,11 @@ export default function NavBar() {
   const menuDisplay = useBreakpointValue({ base: "flex", lg: "none" });
   const navItems = [
     {
+      label: "Docs",
+      icon: <FaBook />,
+      link: "https://docs.sweep.dev/start",
+    },
+    {
       label: "Twitter",
       icon: <FaTwitter />,
       link: "https://twitter.com/sweep__ai",
@@ -35,11 +40,6 @@ export default function NavBar() {
       label: "Discord",
       icon: <FaDiscord />,
       link: "https://discord.gg/sweep-ai",
-    },
-    {
-      label: "Docs",
-      icon: <FaBook />,
-      link: "https://docs.sweep.dev/start",
     },
     {
       label: "Email",
@@ -123,4 +123,3 @@ export default function NavBar() {
     </Box>
   );
 }
-
