@@ -1,4 +1,9 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
+
+function getInitials(name: string): string {
+    return name.split(' ').map(word => word[0]).join('');
+}
+
 import ExternalLinkWithText from "./ExternalLinkWithText";
 import User from "./User";
 
