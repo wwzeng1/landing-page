@@ -1,0 +1,27 @@
+import Sidebar from "./Sidebar";
+
+// ...
+
+export const App = () => {
+  return (
+    <>
+      {/* ... */}
+      <Box
+        textAlign="center"
+        fontSize="xl"
+        bgColor="#0d0a1a"
+        bgImage={circles}
+        bgPos="0 0"
+        bgSize="100%"
+        minH="100vh"
+        bgRepeat="no-repeat"
+        overflowX="hidden"
+      >
+        {/* ... */}
+        <Sidebar />
+        {/* ... */}
+      </Box>
+      {/* ... */}
+    </>
+  );
+};
