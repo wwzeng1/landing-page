@@ -1,5 +1,4 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-
 import ExternalLinkWithText from "./ExternalLinkWithText";
 import User from "./User";
 
@@ -10,20 +9,19 @@ type TestimonialProps = {
     href: string
 }
 
+const getInitials = (name: string) => {
+    const splitName = name.split(' ');
+    return `${splitName[0][0]}${splitName[splitName.length - 1][0]}`;
+};
+
 const Testimonial = ({ children, name, company, href }: TestimonialProps): JSX.Element => {
     return (
         <Box
             overflow="hidden"
-            p={4}
-            mb={8}
-            width={{ base: "100%", md: "30%" }}
-            backgroundColor="purple.900"
-            borderRadius="5%"
-            borderColor="purple.300"
             borderWidth={1}
         >
             <Flex width="100%" m={2} mb={4}>
-                <User><Text color="white">JE</Text></User>
+                <User><Text color="white">{getInitials(name)}</Text></User>
                 <Box flexGrow={1} textAlign="left" ml={4}>
                     <Text fontWeight="bold">{name}</Text>
                     <ExternalLinkWithText href={href} color="#aaa">{company}</ExternalLinkWithText>
