@@ -11,7 +11,11 @@ type TestimonialProps = {
 
 const getInitials = (name: string) => {
     const splitName = name.split(' ');
-    return `${splitName[0][0]}${splitName[splitName.length - 1][0]}`;
+    if (splitName.length === 1) {
+        return splitName[0].substring(0, 2).toUpperCase();
+    } else {
+        return `${splitName[0][0]}${splitName[splitName.length - 1][0]}`.toUpperCase();
+    }
 };
 
 const Testimonial = ({ children, name, company, href }: TestimonialProps): JSX.Element => {
