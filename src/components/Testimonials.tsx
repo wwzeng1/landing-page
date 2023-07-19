@@ -11,6 +11,8 @@ type TestimonialProps = {
 }
 
 const Testimonial = ({ children, name, company, href }: TestimonialProps): JSX.Element => {
+    // This function takes a name as input and returns the initials of the name. 
+    // It splits the name by space, maps each word to its first character, and then joins them.
     const getInitials = (name: string) => name.split(' ').map(word => word[0]).join('');
     return (
         <Box
