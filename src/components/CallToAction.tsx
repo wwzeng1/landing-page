@@ -27,16 +27,19 @@ export default function CallToAction() {
         mb={36}
       >
         <img src={logo} alt="Logo" width={120} height={120} style={{
-          animation: "bob 0.375s ease-in-out infinite alternate",
+          animation: "slide 0.375s ease-in-out infinite alternate",
         }} />
         <style>
           {`
-            @keyframes bob {
-              from {
-                transform: translateY(0);
+            @keyframes slide {
+              0% {
+                transform: translateX(0);
               }
-              to {
-                transform: translateY(15px);
+              50% {
+                transform: translateX(15px);
+              }
+              100% {
+                transform: translateX(0);
               }
             }
           `}
