@@ -7,11 +7,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-// @ts-ignore
-// import { Terminal } from "react-window-ui";
 import { FaDiscord, FaGithub } from "react-icons/fa";
+import { tsParticles } from "tsparticles";
 
 import logo from "../assets/icon.png";
+import ExternalLinkWithText from "./ExternalLinkWithText";
+const demo = require("../assets/demo.mp4");
 import ExternalLinkWithText from "./ExternalLinkWithText";
 const demo = require("../assets/demo.mp4");
 
@@ -28,7 +29,7 @@ export default function CallToAction() {
       >
         <img src={logo} alt="Logo" width={120} height={120} style={{
           animation: "bob 0.75s ease-in-out infinite alternate",
-        }} />
+        }} onClick={handleClick} />
         <style>
           {`
             @keyframes bob {
@@ -83,8 +84,31 @@ export default function CallToAction() {
             </video>
           </Container>
         </Flex>
+      <tsParticles
+        id="tsparticles"
+        options={{
+          particles: {
+            number: {
+              value: 200,
+            },
+            move: {
+              enable: true,
+              speed: 5,
+              direction: "none",
+              random: false,
+              straight: false,
+              outMode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
+            },
+          },
+        }}
+      />
       </Stack>
-    </Container>
+      </Container>
   );
 }
-
