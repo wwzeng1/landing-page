@@ -6,6 +6,7 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
+import Particles from 'react-particles-js';
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 // @ts-ignore
 // import { Terminal } from "react-window-ui";
@@ -14,6 +15,15 @@ import { FaDiscord, FaGithub } from "react-icons/fa";
 import logo from "../assets/icon.png";
 import ExternalLinkWithText from "./ExternalLinkWithText";
 const demo = require("../assets/demo.mp4");
+
+function startParticleAnimation(event) {
+  const logoPosition = event.target.getBoundingClientRect();
+  const particleAnimation = new Particles({
+    position: logoPosition,
+    onComplete: () => particleAnimation.destroy()
+  });
+  particleAnimation.start();
+}
 
 export default function CallToAction() {
   return (
@@ -28,7 +38,7 @@ export default function CallToAction() {
       >
         <img src={logo} alt="Logo" width={120} height={120} style={{
           animation: "bob 0.75s ease-in-out infinite alternate",
-        }} />
+        }} onClick={startParticleAnimation} />
         <style>
           {`
             @keyframes bob {
@@ -87,4 +97,3 @@ export default function CallToAction() {
     </Container>
   );
 }
-
