@@ -6,6 +6,7 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
+import Particles from 'react-particles-js';
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 // @ts-ignore
 // import { Terminal } from "react-window-ui";
@@ -26,9 +27,28 @@ export default function CallToAction() {
         style={{ paddingTop: "0 !important" }}
         mb={36}
       >
-        <img src={logo} alt="Logo" width={120} height={120} style={{
-          animation: "bob 0.75s ease-in-out infinite alternate",
-        }} />
+        <Particles params={{
+          particles: {
+            number: {
+              value: 50,
+            },
+            size: {
+              value: 3,
+            },
+          },
+          interactivity: {
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
+              },
+            },
+          },
+        }}>
+          <img src={logo} alt="Logo" width={120} height={120} style={{
+            animation: "bob 0.75s ease-in-out infinite alternate",
+          }} onClick={() => this.particles.start()} />
+        </Particles>
         <style>
           {`
             @keyframes bob {
@@ -87,4 +107,3 @@ export default function CallToAction() {
     </Container>
   );
 }
-
