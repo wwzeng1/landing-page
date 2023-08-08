@@ -18,7 +18,7 @@ export const Logo = forwardRef<ImageProps, "img">((props, ref) => {
 
   const animation = prefersReducedMotion
     ? undefined
-    : `${spin} infinite 20s linear`
+    : `${spin} infinite 10s linear`
 
   return <chakra.img animation={animation} src={logo} ref={ref} {...props} />
 })
