@@ -7,15 +7,23 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-// @ts-ignore
-// import { Terminal } from "react-window-ui";
 import { FaDiscord, FaGithub } from "react-icons/fa";
+import { useState } from "react";
+import Particles from "react-particles-js";
 
 import logo from "../assets/icon.png";
 import ExternalLinkWithText from "./ExternalLinkWithText";
 const demo = require("../assets/demo.mp4");
+import ExternalLinkWithText from "./ExternalLinkWithText";
+const demo = require("../assets/demo.mp4");
 
 export default function CallToAction() {
+  const [showParticles, setShowParticles] = useState(false);
+
+  const toggleParticles = () => {
+    setShowParticles(!showParticles);
+  };
+
   return (
     <Container maxW={"5xl"}>
       <Stack
@@ -28,7 +36,7 @@ export default function CallToAction() {
       >
         <img src={logo} alt="Logo" width={120} height={120} style={{
           animation: "bob 0.75s ease-in-out infinite alternate",
-        }} />
+        }} onClick={toggleParticles} />
         <style>
           {`
             @keyframes bob {
@@ -76,6 +84,34 @@ export default function CallToAction() {
         >
           <FaDiscord />&nbsp;&nbsp;Join our Discord
         </ExternalLinkWithText>
+        {showParticles && (
+          <Particles
+            params={{
+              particles: {
+                number: {
+                  value: 200,
+                },
+                color: {
+                  value: "#ffffff",
+                },
+                shape: {
+                  type: "circle",
+                },
+                size: {
+                  value: 3,
+                  random: true,
+                },
+                move: {
+                  direction: "none",
+                  speed: 1,
+                },
+                line_linked: {
+                  enable: false,
+                },
+              },
+            }}
+          />
+        )}
         <Flex w={"full"} mt="4rem !important">
           <Container width="100vw" boxShadow="0 0 80px #181818" p={0} maxWidth="full">
             <video src={demo} autoPlay muted loop playsInline>
