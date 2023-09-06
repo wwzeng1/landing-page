@@ -3,11 +3,17 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import ExternalLinkWithText from "./ExternalLinkWithText";
 import User from "./User";
 
+// Function to get the initials from a name
 function getInitials(name: string): string {
+    // Trim the name to remove leading and trailing spaces
     const trimmedName = name.trim();
+    // If the name is empty after trimming, return an empty string
     if (!trimmedName) return "";
+    // Split the trimmed name into words
     const words = trimmedName.split(/\s+/);
+    // Get the first letter of the first two words and convert them to uppercase
     const initials = words.slice(0, 2).map(word => word[0].toUpperCase());
+    // Join the initials to form a string and return it
     return initials.join("");
 }
 
