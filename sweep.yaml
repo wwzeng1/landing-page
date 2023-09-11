@@ -7,5 +7,5 @@ branch: 'main'
 description: "This is a landing page. Make sure to write in typescript."
 
 sandbox:
-  install: ["yarn install --ignore-engines"]
+  install: ["yarn install --ignore-engines && yarn add prettier"]
   check: ["yarn run prettier --write {file_path}", "yarn run eslint {file_path}", "yarn run tsc"]
