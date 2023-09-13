@@ -10,6 +10,7 @@ type TestimonialProps = {
   href: string;
 };
 
+// getInitials function extracts the initials from a given name
 const getInitials = (name: string) =>
   name
     .split(" ")
@@ -18,6 +19,7 @@ const getInitials = (name: string) =>
     .join("")
     .toUpperCase();
 
+// Testimonial component renders a single testimonial
 const Testimonial = ({
   children,
   name,
@@ -53,6 +55,7 @@ const Testimonial = ({
   );
 };
 
+// Testimonials component renders a collection of testimonials
 export default function Testimonials() {
   return (
     <Box display="flex" justifyContent="center" alignItems="center">
