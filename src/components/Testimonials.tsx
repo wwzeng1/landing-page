@@ -28,9 +28,7 @@ const Testimonial = ({
       borderWidth={1}
     >
       <Flex width="100%" m={2} mb={4}>
-        <User name={name}>
-          <Text color="white">JE</Text>
-        </User>
+        <User name={name} />
         <Box flexGrow={1} textAlign="left" ml={4}>
           <Text fontWeight="bold">{name}</Text>
           <ExternalLinkWithText href={href} color="#aaa">
