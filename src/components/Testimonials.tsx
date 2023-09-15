@@ -24,6 +24,7 @@ const Testimonial = ({ children, name, company, href }: TestimonialProps): JSX.E
         >
             <Flex width="100%" m={2} mb={4}>
                 const initials = name.split(' ').map((n: string) => n[0]).join('');
+                <User initials={initials} />
                 <Box flexGrow={1} textAlign="left" ml={4}>
                     <Text fontWeight="bold">{name}</Text>
                     <ExternalLinkWithText href={href} color="#aaa">{company}</ExternalLinkWithText>
