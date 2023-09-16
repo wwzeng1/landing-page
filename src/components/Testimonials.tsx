@@ -16,7 +16,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   company,
   href,
 }) => {
-  const getInitials = (name: string) => {
+  const getInitials = (name: string): string => {
     const initials = name
       .split(" ")
       .map((n: string) => n[0])
