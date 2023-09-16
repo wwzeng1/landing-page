@@ -90,8 +90,7 @@ export default function Testimonials() {
             <ExternalLinkWithText href="https://github.com/edreisMD/plugnplai/pull/75">
               edreisMD/plugnplai#75
             </ExternalLinkWithText>
-            &nbsp;<b>Total lifesaver</b> 🙌. Sweep just saved me{" "}
-            <b>6 hours of work</b>.
+            &nbsp;Total lifesaver 🙌. Sweep just saved me 6 hours of work.
           </Testimonial>
           <Testimonial
             name="Kunal Gupta"
@@ -100,8 +99,8 @@ export default function Testimonials() {
           >
             Using this, it’s pretty cool. It’s a little bit like having a junior
             intern, which doesn’t sound like a lot at first, but you can run
-            like <b>100 junior interns</b> at once and they can cover a{" "}
-            <b>lot of ground</b> in parallel.
+            like 100 junior interns at once and they can cover a lot of ground
+            in parallel.
           </Testimonial>
         </Box>
       </Box>
