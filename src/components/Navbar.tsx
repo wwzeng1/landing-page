@@ -13,51 +13,55 @@ import {
   MenuList,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
+import {
+  FaBook,
+  FaDiscord,
+  FaGithub,
+  FaTwitter,
+  FaInfoCircle,
+} from "react-icons/fa";
 import logo from "../assets/icon.png";
-import AboutUs from './AboutUs';
 
 export default function NavBar() {
-
   const listDisplay = useBreakpointValue({ base: "none", lg: "flex" });
   const menuDisplay = useBreakpointValue({ base: "flex", lg: "none" });
   const navItems = [
-      {
-        label: "Twitter",
-        icon: <FaTwitter />,
-        link: "https://twitter.com/sweep__ai",
-      },
-      {
-        label: "Github",
-        icon: <FaGithub />,
-        link: "https://github.com/sweepai",
-      },
-      {
-        label: "Discord",
-        icon: <FaDiscord />,
-        link: "https://discord.gg/sweep-ai",
-      },
-      {
-        label: "Docs",
-        icon: <FaBook />,
-        link: "https://docs.sweep.dev/start",
-      },
-      {
-        label: "Email",
-        icon: <EmailIcon />,
-        link: "mailto:team@sweep.dev",
-      },
-      {
-        label: "Buy Sweep Pro",
-        icon: <p>Buy Sweep Pro</p>,
-        link: "https://buy.stripe.com/fZe03512h99u0AE6os",
-      },
-      {
-        label: "About Us",
-        icon: <AboutUs />,
-        link: "/about-us",
-      },
-    ];
+    {
+      label: "Twitter",
+      icon: <FaTwitter />,
+      link: "https://twitter.com/sweep__ai",
+    },
+    {
+      label: "Github",
+      icon: <FaGithub />,
+      link: "https://github.com/sweepai",
+    },
+    {
+      label: "Discord",
+      icon: <FaDiscord />,
+      link: "https://discord.gg/sweep-ai",
+    },
+    {
+      label: "Docs",
+      icon: <FaBook />,
+      link: "https://docs.sweep.dev/start",
+    },
+    {
+      label: "Email",
+      icon: <EmailIcon />,
+      link: "mailto:team@sweep.dev",
+    },
+    {
+      label: "Buy Sweep Pro",
+      icon: <p>Buy Sweep Pro</p>,
+      link: "https://buy.stripe.com/fZe03512h99u0AE6os",
+    },
+    {
+      label: "About Us",
+      icon: <FaInfoCircle />,
+      link: "/about-us",
+    },
+  ];
 
   return (
     <Box as="nav" bg="bg-surface" boxShadow="sm" width="full" p={4}>
@@ -90,26 +94,26 @@ export default function NavBar() {
               variant="ghost"
               aria-label={"Sweep Pro"}
               onClick={() => {
-                window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
+                window.open(
+                  "https://buy.stripe.com/fZe03512h99u0AE6os",
+                  "_blank",
+                );
               }}
               px={2}
               display={menuDisplay}
             />
             <MenuButton
               as={IconButton}
-              aria-label='Options'
+              aria-label="Options"
               icon={<HamburgerIcon />}
-              variant='outline'
+              variant="outline"
               display={menuDisplay}
             />
-            <MenuList
-              backgroundColor="#333"
-            >
+            <MenuList backgroundColor="#333">
               {navItems.map((item) => (
                 <MenuItem backgroundColor="#333">
                   {item.label}
-                  {
-                    item.label !== "Buy Sweep Pro" &&
+                  {item.label !== "Buy Sweep Pro" && (
                     <IconButton
                       key={item.label}
                       icon={item.icon}
@@ -119,7 +123,7 @@ export default function NavBar() {
                         window.open(item.link, "_blank");
                       }}
                     />
-                  }
+                  )}
                 </MenuItem>
               ))}
             </MenuList>
@@ -129,4 +133,3 @@ export default function NavBar() {
     </Box>
   );
 }
-
