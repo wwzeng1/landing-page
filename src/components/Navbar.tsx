@@ -15,11 +15,12 @@ import {
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
+import { useState } from "react";
 
 export default function NavBar() {
-
   const listDisplay = useBreakpointValue({ base: "none", lg: "flex" });
   const menuDisplay = useBreakpointValue({ base: "flex", lg: "none" });
+  const [fireworksTrigger, setFireworksTrigger] = useState(false);
   const navItems = [
     {
       label: "Twitter",
@@ -50,6 +51,7 @@ export default function NavBar() {
       label: "Buy Sweep Pro",
       icon: <p>Buy Sweep Pro</p>,
       link: "https://buy.stripe.com/fZe03512h99u0AE6os",
+      onClick: () => setFireworksTrigger(true),
     },
   ];
 
@@ -84,26 +86,26 @@ export default function NavBar() {
               variant="ghost"
               aria-label={"Sweep Pro"}
               onClick={() => {
-                window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
+                window.open(
+                  "https://buy.stripe.com/fZe03512h99u0AE6os",
+                  "_blank",
+                );
               }}
               px={2}
               display={menuDisplay}
             />
             <MenuButton
               as={IconButton}
-              aria-label='Options'
+              aria-label="Options"
               icon={<HamburgerIcon />}
-              variant='outline'
+              variant="outline"
               display={menuDisplay}
             />
-            <MenuList
-              backgroundColor="#333"
-            >
+            <MenuList backgroundColor="#333">
               {navItems.map((item) => (
                 <MenuItem backgroundColor="#333">
                   {item.label}
-                  {
-                    item.label !== "Buy Sweep Pro" &&
+                  {item.label !== "Buy Sweep Pro" && (
                     <IconButton
                       key={item.label}
                       icon={item.icon}
@@ -113,7 +115,7 @@ export default function NavBar() {
                         window.open(item.link, "_blank");
                       }}
                     />
-                  }
+                  )}
                 </MenuItem>
               ))}
             </MenuList>
@@ -123,4 +125,3 @@ export default function NavBar() {
     </Box>
   );
 }
-
