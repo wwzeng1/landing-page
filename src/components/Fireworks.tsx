@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Particles from 'react-particles-js';
 
 const Fireworks = () => {
+    const [particles, setParticles] = useState(false);
     const particlesOptions = {
         particles: {
             number: {
@@ -22,13 +23,14 @@ const Fireworks = () => {
     };
 
     const handleClick = () => {
-        // Logic to trigger fireworks particles
+        setParticles(true);
     };
 
     return (
         <Particles 
             params={particlesOptions} 
             onClick={handleClick} 
+            particles={particles}
         />
     );
 };
