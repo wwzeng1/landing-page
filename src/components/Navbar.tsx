@@ -20,6 +20,8 @@ export default function NavBar() {
 
   const listDisplay = useBreakpointValue({ base: "none", lg: "flex" });
   const menuDisplay = useBreakpointValue({ base: "flex", lg: "none" });
+  import { Link } from 'react-router-dom';
+  
   const navItems = [
     {
       label: "Twitter",
@@ -51,6 +53,10 @@ export default function NavBar() {
       icon: <p>Buy Sweep Pro</p>,
       link: "https://buy.stripe.com/fZe03512h99u0AE6os",
     },
+    {
+      label: "About Us",
+      link: "/about-us",
+    },
   ];
 
   return (
@@ -65,16 +71,22 @@ export default function NavBar() {
           </HStack>
           <ButtonGroup variant="link" display={listDisplay}>
             {navItems.map((item) => (
-              <IconButton
-                key={item.label}
-                icon={item.icon}
-                variant="ghost"
-                aria-label={item.label}
-                onClick={() => {
-                  window.open(item.link, "_blank");
-                }}
-                px={2}
-              />
+              item.label === "About Us" ? (
+                <Link to={item.link}>
+                  {item.label}
+                </Link>
+              ) : (
+                <IconButton
+                  key={item.label}
+                  icon={item.icon}
+                  variant="ghost"
+                  aria-label={item.label}
+                  onClick={() => {
+                    window.open(item.link, "_blank");
+                  }}
+                  px={2}
+                />
+              )
             ))}
           </ButtonGroup>
           <Menu>
@@ -96,24 +108,26 @@ export default function NavBar() {
               variant='outline'
               display={menuDisplay}
             />
-            <MenuList
-              backgroundColor="#333"
-            >
+            <MenuList backgroundColor="#333">
               {navItems.map((item) => (
                 <MenuItem backgroundColor="#333">
-                  {item.label}
-                  {
-                    item.label !== "Buy Sweep Pro" &&
-                    <IconButton
-                      key={item.label}
-                      icon={item.icon}
-                      variant="ghost"
-                      aria-label={item.label}
-                      onClick={() => {
-                        window.open(item.link, "_blank");
-                      }}
-                    />
-                  }
+                  {item.label === "About Us" ? (
+                    <Link to={item.link}>
+                      {item.label}
+                    </Link>
+                  ) : (
+                    item.label !== "Buy Sweep Pro" && (
+                      <IconButton
+                        key={item.label}
+                        icon={item.icon}
+                        variant="ghost"
+                        aria-label={item.label}
+                        onClick={() => {
+                          window.open(item.link, "_blank");
+                        }}
+                      />
+                    )
+                  )}
                 </MenuItem>
               ))}
             </MenuList>
