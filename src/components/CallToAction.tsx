@@ -7,17 +7,17 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-// @ts-ignore
-// import { Terminal } from "react-window-ui";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 
 import logo from "../assets/icon.png";
 import ExternalLinkWithText from "./ExternalLinkWithText";
+import FireworksParticles from "./FireworksParticles";
 const demo = require("../assets/demo.mp4");
 
 export default function CallToAction() {
   return (
     <Container maxW={"5xl"}>
+      <FireworksParticles />
       <Stack
         textAlign={"center"}
         align={"center"}
@@ -58,7 +58,7 @@ export default function CallToAction() {
           colorScheme={"purple"}
           bg={"purple.400"}
           _hover={{ bg: "purple.600" }}
-          onClick={() => window.open("https://github.com/apps/sweep-ai")}
+          onClick={() => {window.open("https://github.com/apps/sweep-ai"); <FireworksParticles />;}}
           fontSize={"xl"}
           mb="1rem !important"
         >
