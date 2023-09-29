@@ -16,6 +16,10 @@ const demo = require("../assets/demo.mp4");
 
 export default function CallToAction() {
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
+  let fireworks;
+  if (coordinates.x !== 0 && coordinates.y !== 0) {
+    // Fireworks component removed
+  }
   return (
     <Container maxW={"5xl"}>
       <Stack
@@ -107,6 +111,7 @@ export default function CallToAction() {
             </video>
           </Container>
         </Flex>
+        {fireworks}
       </Stack>
     </Container>
   );
