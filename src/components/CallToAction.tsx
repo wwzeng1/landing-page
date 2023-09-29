@@ -9,11 +9,14 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 import logo from "../assets/icon.png";
+import { useState } from "react";
 
 import ExternalLinkWithText from "./ExternalLinkWithText";
 const demo = require("../assets/demo.mp4");
 
 export default function CallToAction() {
+  const [showFireworks, setShowFireworks] = useState(false);
+
   return (
     <Container maxW={"5xl"}>
       <Stack
