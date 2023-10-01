@@ -13,6 +13,7 @@ import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { useEffect } from "react";
 import Testimonials from "./components/Testimonials";
 import Users from "./components/Users";
+import AboutUs from "./components/AboutUs";
 
 import circles from "./assets/circles.svg";
 import Features from "./components/Features";
@@ -57,11 +58,18 @@ export const App = () => {
           >
             {false && <ColorModeSwitcher />}
             <Navbar />
-            <CallToAction />
-            <Users />
-            <Features />
-            <Testimonials />
-            <Conclusion />
+            <Switch>
+              <Route path="/about-us">
+                <AboutUs />
+              </Route>
+              <Route path="/">
+                <CallToAction />
+                <Users />
+                <Features />
+                <Testimonials />
+                <Conclusion />
+              </Route>
+            </Switch>
           </Box>
         </ForceDarkMode>
       </ChakraProvider>
