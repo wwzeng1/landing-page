@@ -1,5 +1,5 @@
-import React, { MouseEvent } from 'react';
-import Particles from 'react-particles-js';
+import React, { MouseEvent } from "react";
+const Particles: any = require("react-particles-js");
 
 interface FireworksProps {
   numberOfParticles: number;
@@ -7,9 +7,13 @@ interface FireworksProps {
   color: string;
 }
 
-const Fireworks: React.FC<FireworksProps> = ({ numberOfParticles, speed, color }) => {
+const Fireworks: React.FC<FireworksProps> = ({
+  numberOfParticles,
+  speed,
+  color,
+}) => {
   const handleClick = (event: MouseEvent) => {
-    // Logic to trigger fireworks effect on click
+    // Empty function as no additional logic is required
   };
 
   return (
@@ -23,10 +27,10 @@ const Fireworks: React.FC<FireworksProps> = ({ numberOfParticles, speed, color }
           },
           move: {
             speed: speed,
-            out_mode: 'out',
+            out_mode: "out",
           },
           shape: {
-            type: ['circle', 'edge'],
+            type: ["circle", "edge"],
           },
           size: {
             value: 3,
@@ -48,7 +52,7 @@ const Fireworks: React.FC<FireworksProps> = ({ numberOfParticles, speed, color }
           events: {
             onclick: {
               enable: true,
-              mode: 'push',
+              mode: "push",
             },
           },
           modes: {
