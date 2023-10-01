@@ -14,6 +14,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import logo from "../assets/icon.png";
 
 export default function NavBar() {
@@ -50,6 +51,11 @@ export default function NavBar() {
       label: "Buy Sweep Pro",
       icon: <p>Buy Sweep Pro</p>,
       link: "https://buy.stripe.com/fZe03512h99u0AE6os",
+    },
+    {
+      label: "About Us",
+      icon: <p>About Us</p>,
+      link: "/about-us",
     },
   ];
 
