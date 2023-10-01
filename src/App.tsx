@@ -14,8 +14,8 @@ import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import Testimonials from "./components/Testimonials";
 import Users from "./components/Users";
 import circles from "./assets/circles.svg";
-
 import Features from "./components/Features";
+
 import Conclusion from "./components/Conclusion";
 
 const config: ThemeConfig = {
