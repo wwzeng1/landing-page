@@ -1,7 +1,7 @@
 import React from "react";
 const Pricing = () => {
   const handleClick = () => {
-    // Trigger the Fireworks component
+    console.log("Clicked");
   };
 
   return (
