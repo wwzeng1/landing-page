@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
+import Pricing from './Pricing';
 
 export default function NavBar() {
 
@@ -50,6 +51,11 @@ export default function NavBar() {
       label: "Buy Sweep Pro",
       icon: <p>Buy Sweep Pro</p>,
       link: "https://buy.stripe.com/fZe03512h99u0AE6os",
+    },
+    {
+      label: "Pricing",
+      icon: <p>Pricing</p>,
+      link: () => <Pricing />,
     },
   ];
 
