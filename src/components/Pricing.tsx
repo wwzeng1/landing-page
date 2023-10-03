@@ -1,17 +1,13 @@
-import React from 'react';
-import Fireworks from './Fireworks';
+import React, { useState } from "react";
 
 const Pricing: React.FC = () => {
-    const handleClick = () => {
-        // Trigger fireworks particles
-    };
+  const [showFireworks, setShowFireworks] = useState(false);
 
-    return (
-        <div onClick={handleClick}>
-            {/* Pricing information goes here */}
-            <Fireworks />
-        </div>
-    );
+  const handleClick = () => {
+    setShowFireworks(true);
+  };
+
+  return <div onClick={handleClick}>{/* Pricing information goes here */}</div>;
 };
 
 export default Pricing;
