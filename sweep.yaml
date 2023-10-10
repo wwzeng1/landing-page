@@ -8,6 +8,7 @@ description: "This is a landing page. Make sure to write in typescript."
 
 docs:
   particles: ["https://particles.js.org/docs", "We use particles to add effects to our website when events happen"]
+  
 
 sandbox:
   install: ["yarn install --ignore-engines && yarn add prettier"]
