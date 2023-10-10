@@ -33,6 +33,28 @@ const CommentHeader = ({ src, username, href }: CommentHeaderProps) : JSX.Elemen
     )
 }
 
+// const CommentHeader = ({ src, username, href }: CommentHeaderProps) : JSX.Element => {
+//     return (
+//         <ExternalLinkWithText href={href} includeIcon={false}>
+//             <Box display="flex" alignItems="center" mt={8} mb={2}>
+//                 <img 
+//                     src={src}
+//                     alt="avatar" 
+//                     style={{
+//                         borderRadius: "50%", 
+//                         marginRight: "10px", 
+//                         display: "inline-block",
+//                         verticalAlign: "middle",
+//                     }} 
+//                     width={30}
+//                 />
+//                 <Text size="md">
+//                     <b>{username}</b>
+//                 </Text>
+//             </Box>
+//         </ExternalLinkWithText>
+//     )
+// }
 
 type CommentProps = {
     children: React.ReactNode,
