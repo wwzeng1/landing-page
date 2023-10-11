@@ -5,7 +5,6 @@
 # If you use this be sure to frequently sync your default branch(main, master) to dev.
 branch: 'main'
 description: "This is a landing page. Make sure to write in typescript."
-
 docs:
   particles: ["https://particles.js.org/docs/interfaces/tsParticles_Engine.Options_Interfaces_Particles_Size_ISize.ISize", "We use particles to add effects to our website when events happen"]
 
