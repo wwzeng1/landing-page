@@ -5,11 +5,12 @@
 # If you use this be sure to frequently sync your default branch(main, master) to dev.
 branch: 'main'
 description: "This is a landing page. Make sure to write in typescript."
-
 docs:
-  particles: ["https://particles.js.org/docs", "We use particles to add effects to our website when events happen."]
-
+  particles: ["https://particles.js.org/docs/", "We use particles to add effects to our website when events happen"]
 
 sandbox:
   install: ["yarn install --ignore-engines && yarn add prettier"]
   check: ["yarn run prettier --write {file_path}", "yarn run eslint {file_path}", "yarn run tsc"]
+
+rules:
+ - "There should not be large chunks of commented out code besides docstrings."
