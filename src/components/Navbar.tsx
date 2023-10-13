@@ -15,8 +15,11 @@ import {
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
+import Fireworks from './Fireworks';
+import { useState } from 'react';
 
 export default function NavBar() {
+  const [isFireworksActive, setIsFireworksActive] = useState(false);
 
   const listDisplay = useBreakpointValue({ base: "none", lg: "flex" });
   const menuDisplay = useBreakpointValue({ base: "flex", lg: "none" });
@@ -72,6 +75,10 @@ export default function NavBar() {
                 aria-label={item.label}
                 onClick={() => {
                   window.open(item.link, "_blank");
+                  if (item.label === "Buy Sweep Pro") {
+                    setIsFireworksActive(true);
+                    setTimeout(() => setIsFireworksActive(false), 3000);
+                  }
                 }}
                 px={2}
               />
@@ -85,6 +92,8 @@ export default function NavBar() {
               aria-label={"Sweep Pro"}
               onClick={() => {
                 window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
+                setIsFireworksActive(true);
+                setTimeout(() => setIsFireworksActive(false), 3000);
               }}
               px={2}
               display={menuDisplay}
@@ -120,6 +129,7 @@ export default function NavBar() {
           </Menu>
         </Flex>
       </HStack>
+      <Fireworks isActive={isFireworksActive} />
     </Box>
   );
 }
