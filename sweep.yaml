@@ -9,7 +9,7 @@ docs:
   particles: ["https://particles.js.org/docs/", "We use particles to add effects to our website when events happen"]
 
 sandbox:
-  install: ["yarn install --ignore-engines && yarn add prettier"]
+  install: ["yarn install --ignore-engines && yarn add prettier && yarn add particles.js"]
   check: ["yarn run prettier --write {file_path}", "yarn run eslint {file_path}", "yarn run tsc"]
 
 rules:
