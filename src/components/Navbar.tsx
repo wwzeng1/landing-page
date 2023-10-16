@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
-import Fireworks from './Fireworks';
+// Fireworks import removed as it will be moved to the Pricing component
 
 export default function NavBar() {
 
@@ -66,31 +66,16 @@ export default function NavBar() {
           </HStack>
           <ButtonGroup variant="link" display={listDisplay}>
             {navItems.map((item) => (
-              item.label === "Buy Sweep Pro" ? (
-                <Fireworks speed={10} splitCount={5}>
-                  <IconButton
-                    key={item.label}
-                    icon={item.icon}
-                    variant="ghost"
-                    aria-label={item.label}
-                    onClick={() => {
-                      window.open(item.link, "_blank");
-                    }}
-                    px={2}
-                  />
-                </Fireworks>
-              ) : (
-                <IconButton
-                  key={item.label}
-                  icon={item.icon}
-                  variant="ghost"
-                  aria-label={item.label}
-                  onClick={() => {
-                    window.open(item.link, "_blank");
-                  }}
-                  px={2}
-                />
-              )
+              <IconButton
+                key={item.label}
+                icon={item.icon}
+                variant="ghost"
+                aria-label={item.label}
+                onClick={() => {
+                  window.open(item.link, "_blank");
+                }}
+                px={2}
+              />
             ))}
           </ButtonGroup>
           <Menu>
