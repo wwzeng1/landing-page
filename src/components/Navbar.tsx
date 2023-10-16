@@ -94,7 +94,7 @@ export default function NavBar() {
                 window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
             
                 // Create a new instance of the fireworks module
-                const fireworksInstance = new fireworks();
+                const fireworksInstance = new tsParticles.fireworks();
             
                 // Initialize the fireworks module with the options
                 fireworksInstance.init(fireworksOptions);
