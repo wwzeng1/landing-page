@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
+import { fireworks } from 'tsParticles';
 
 export default function NavBar() {
 
@@ -53,6 +54,13 @@ export default function NavBar() {
     },
   ];
 
+  // Set the options for the fireworks particles
+  const fireworksOptions = {
+    speed: 5,
+    splitCount: 10,
+  };
+}
+
   return (
     <Box as="nav" bg="bg-surface" boxShadow="sm" width="full" p={4}>
       <HStack spacing="10" justify="space-between">
@@ -85,6 +93,15 @@ export default function NavBar() {
               aria-label={"Sweep Pro"}
               onClick={() => {
                 window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
+            
+                // Create a new instance of the fireworks module
+                const fireworksInstance = new fireworks();
+            
+                // Initialize the fireworks module with the options
+                fireworksInstance.init(fireworksOptions);
+            
+                // Start the fireworks animation
+                fireworksInstance.play();
               }}
               px={2}
               display={menuDisplay}
