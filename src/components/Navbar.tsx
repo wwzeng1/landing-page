@@ -15,13 +15,30 @@ import {
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
+import Fireworks from './Fireworks';
+import { useState } from 'react';
+  MenuButton,
+  MenuItem,
+  MenuList,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
+import logo from "../assets/icon.png";
 // Fireworks import removed as it will be moved to the Pricing component
 
 export default function NavBar() {
 
+  const [showFireworks, setShowFireworks] = useState(false);
   const listDisplay = useBreakpointValue({ base: "none", lg: "flex" });
   const menuDisplay = useBreakpointValue({ base: "flex", lg: "none" });
   const navItems = [
+    {
+      label: "Buy Sweep Pro",
+      icon: <p>Buy Sweep Pro</p>,
+      link: "https://buy.stripe.com/fZe03512h99u0AE6os",
+      onClick: () => setShowFireworks(true),
+    },
+  ];
     {
       label: "Twitter",
       icon: <FaTwitter />,
@@ -47,81 +64,79 @@ export default function NavBar() {
       icon: <EmailIcon />,
       link: "mailto:team@sweep.dev",
     },
-    {
-      label: "Buy Sweep Pro",
-      icon: <p>Buy Sweep Pro</p>,
-      link: "https://buy.stripe.com/fZe03512h99u0AE6os",
-    },
-  ];
-
-  return (
-    <Box as="nav" bg="bg-surface" boxShadow="sm" width="full" p={4}>
-      <HStack spacing="10" justify="space-between">
-        <Flex justify="space-between" flex="1">
-          <HStack>
-            <Button variant="ghost">
-              <Image src={logo} alt="logo" width={10} borderRadius={12} />
-              Sweep AI
-            </Button>
-          </HStack>
-          <ButtonGroup variant="link" display={listDisplay}>
-            {navItems.map((item) => (
+    return (
+      <Box as="nav" bg="bg-surface" boxShadow="sm" width="full" p={4}>
+        <HStack spacing="10" justify="space-between">
+          <Flex justify="space-between" flex="1">
+            <HStack>
+              <Button variant="ghost">
+                <Image src={logo} alt="logo" width={10} borderRadius={12} />
+                Sweep AI
+              </Button>
+            </HStack>
+            <ButtonGroup variant="link" display={listDisplay}>
+              {navItems.map((item) => (
+                <IconButton
+                  key={item.label}
+                  icon={item.icon}
+                  variant="ghost"
+                  aria-label={item.label}
+                  onClick={() => {
+                    window.open(item.link, "_blank");
+                    if (item.label === "Buy Sweep Pro") {
+                      setShowFireworks(true);
+                    }
+                  }}
+                  px={2}
+                />
+              ))}
+            </ButtonGroup>
+            <Menu>
               <IconButton
-                key={item.label}
-                icon={item.icon}
+                key={"Sweep Pro"}
+                icon={<p>Sweep Pro</p>}
                 variant="ghost"
-                aria-label={item.label}
+                aria-label={"Sweep Pro"}
                 onClick={() => {
-                  window.open(item.link, "_blank");
+                  window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
+                  setShowFireworks(true);
                 }}
                 px={2}
+                display={menuDisplay}
               />
-            ))}
-          </ButtonGroup>
-          <Menu>
-            <IconButton
-              key={"Sweep Pro"}
-              icon={<p>Sweep Pro</p>}
-              variant="ghost"
-              aria-label={"Sweep Pro"}
-              onClick={() => {
-                window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
-              }}
-              px={2}
-              display={menuDisplay}
-            />
-            <MenuButton
-              as={IconButton}
-              aria-label='Options'
-              icon={<HamburgerIcon />}
-              variant='outline'
-              display={menuDisplay}
-            />
-            <MenuList
-              backgroundColor="#333"
-            >
-              {navItems.map((item) => (
-                <MenuItem backgroundColor="#333">
-                  {item.label}
-                  {
-                    item.label !== "Buy Sweep Pro" &&
-                    <IconButton
-                      key={item.label}
-                      icon={item.icon}
-                      variant="ghost"
-                      aria-label={item.label}
-                      onClick={() => {
-                        window.open(item.link, "_blank");
-                      }}
-                    />
-                  }
-                </MenuItem>
-              ))}
-            </MenuList>
-          </Menu>
-        </Flex>
-      </HStack>
-    </Box>
-  );
-}
+              <MenuButton
+                as={IconButton}
+                aria-label='Options'
+                icon={<HamburgerIcon />}
+                variant='outline'
+                display={menuDisplay}
+              />
+              <MenuList
+                backgroundColor="#333"
+              >
+                {navItems.map((item) => (
+                  <MenuItem backgroundColor="#333">
+                    {item.label}
+                    {
+                      item.label !== "Buy Sweep Pro" &&
+                      <IconButton
+                        key={item.label}
+                        icon={item.icon}
+                        variant="ghost"
+                        aria-label={item.label}
+                        onClick={() => {
+                          window.open(item.link, "_blank");
+                        }}
+                      />
+                    }
+                  </MenuItem>
+                ))}
+              </MenuList>
+            </Menu>
+          </Flex>
+        </HStack>
+        {showFireworks && <Fireworks speed={10} splitCount={5} />}
+      </Box>
+    );
+  }
 
