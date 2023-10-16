@@ -59,7 +59,6 @@ export default function NavBar() {
     speed: 5,
     splitCount: 10,
   };
-}
 
   return (
     <Box as="nav" bg="bg-surface" boxShadow="sm" width="full" p={4}>
