@@ -17,14 +17,6 @@ import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
 import Fireworks from './Fireworks';
 import { useState } from 'react';
-  MenuButton,
-  MenuItem,
-  MenuList,
-  useBreakpointValue,
-} from "@chakra-ui/react";
-import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
-import logo from "../assets/icon.png";
-// Fireworks import removed as it will be moved to the Pricing component
 
 export default function NavBar() {
 
@@ -38,7 +30,6 @@ export default function NavBar() {
       link: "https://buy.stripe.com/fZe03512h99u0AE6os",
       onClick: () => setShowFireworks(true),
     },
-  ];
     {
       label: "Twitter",
       icon: <FaTwitter />,
@@ -64,6 +55,9 @@ export default function NavBar() {
       icon: <EmailIcon />,
       link: "mailto:team@sweep.dev",
     },
+  ];
+
+  // Rest of the code...
     return (
       <Box as="nav" bg="bg-surface" boxShadow="sm" width="full" p={4}>
         <HStack spacing="10" justify="space-between">
