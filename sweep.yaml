@@ -2,6 +2,7 @@
 # For details on our config file, check out our docs at https://docs.sweep.dev
 # Reference: https://github.com/sweepai/sweep/blob/main/.github/sweep.yaml.
 
+
 # If you use this be sure to frequently sync your default branch(main, master) to dev.
 branch: 'main'
 description: "This is a landing page. Make sure to write in typescript."
