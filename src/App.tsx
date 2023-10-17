@@ -8,6 +8,7 @@ import {
 import CallToAction from "./components/CallToAction";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
+import PricingPage from "./components/PricingPage";
 import ogimage from "./assets/ogimage.png";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { useEffect } from "react";
@@ -62,6 +63,7 @@ export const App = () => {
             <Features />
             <Testimonials />
             <Conclusion />
+            <PricingPage />
           </Box>
         </ForceDarkMode>
       </ChakraProvider>
