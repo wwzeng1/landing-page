@@ -13,6 +13,7 @@ import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { useEffect } from "react";
 import Testimonials from "./components/Testimonials";
 import Users from "./components/Users";
+import { useLocation } from "react-router-dom";
 
 import circles from "./assets/circles.svg";
 import Features from "./components/Features";
@@ -38,6 +39,8 @@ function ForceDarkMode(props: { children: JSX.Element }) {
 }
 
 export const App = () => {
+  const location = useLocation();
+
   return (
     <>
       <Helmet>
@@ -63,6 +66,7 @@ export const App = () => {
             <Features />
             <Testimonials />
             <Conclusion />
+            {location.pathname === '/pricing' && <Fireworks />}
           </Box>
         </ForceDarkMode>
       </ChakraProvider>
