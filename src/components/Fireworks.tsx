@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { tsParticles } from 'tsparticles';
+import tsParticles from 'tsparticles';
 
 const Fireworks = () => {
   useEffect(() => {
