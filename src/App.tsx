@@ -18,7 +18,7 @@ import { useLocation } from "react-router-dom";
 import circles from "./assets/circles.svg";
 import Features from "./components/Features";
 import Conclusion from "./components/Conclusion";
-import Fireworks from './components/Fireworks/Fireworks';
+import Fireworks from './components/Fireworks';
 
 const config: ThemeConfig = {
   initialColorMode: "dark",
