@@ -4,33 +4,33 @@ import { tsParticles } from 'tsparticles';
 const Fireworks = () => {
   useEffect(() => {
     tsParticles.load('fireworks-container', {
-+      fpsLimit: 60,
-+      particles: {
-+        number: {
-+          value: 0,
-+        },
-+        color: {
-+          value: "#ff0000",
-+        },
-+        shape: {
-+          type: "circle",
-+        },
-+      },
-+      interactivity: {
-+        events: {
-+          onClick: {
-+            enable: true,
-+            mode: "repulse",
-+          },
-+        },
-+        modes: {
-+          repulse: {
-+            distance: 200,
-+            duration: 0.4,
-+          },
-+        },
-+      },
-+      detectRetina: true,
+      fpsLimit: 60,
+      particles: {
+        number: {
+          value: 0,
+        },
+        color: {
+          value: "#ff0000",
+        },
+        shape: {
+          type: "circle",
+        },
+      },
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      detectRetina: true,
     });
   }, []);
 
