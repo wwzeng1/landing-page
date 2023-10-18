@@ -15,6 +15,13 @@ const Fireworks = () => {
         shape: {
           type: "circle",
         },
+        move: {
+          enable: true,
+          speed: 5,
+        },
+        split: {
+          value: 3,
+        },
       },
       interactivity: {
         events: {
