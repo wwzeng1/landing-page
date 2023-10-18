@@ -8,9 +8,6 @@ import {
   IconButton,
   Image,
   Menu,
-} from "@chakra-ui/react";
-import { useState } from "react";
-import Fireworks from './Fireworks';
   MenuButton,
   MenuItem,
   MenuList,
@@ -18,7 +15,7 @@ import Fireworks from './Fireworks';
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
-import Fireworks from './Fireworks.tsx';
+import Fireworks from './Fireworks';
 
 export default function NavBar() {
 
@@ -82,8 +79,6 @@ export default function NavBar() {
             ))}
           </ButtonGroup>
           <Menu>
-            const [showFireworks, setShowFireworks] = useState(false);
-            
             <IconButton
               key={"Sweep Pro"}
               icon={<p>Sweep Pro</p>}
@@ -91,12 +86,10 @@ export default function NavBar() {
               aria-label={"Sweep Pro"}
               onClick={() => {
                 window.open("https://buy.stripe.com/fZe03512h99u0AE6os", "_blank");
-                setShowFireworks(true);
               }}
               px={2}
               display={menuDisplay}
             />
-            {showFireworks && <Fireworks />}
             <MenuButton
               as={IconButton}
               aria-label='Options'
