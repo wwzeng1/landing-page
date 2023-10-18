@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBook, FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import logo from "../assets/icon.png";
+import Fireworks from './Fireworks.tsx';
 
 export default function NavBar() {
 
