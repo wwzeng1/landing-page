@@ -23,6 +23,14 @@ const Fireworks = () => {
           value: 3,
         },
       },
+    });
+  }, []);
+
+  return <div id="fireworks-container" />;
+};
+
+export default Fireworks;
+      },
       interactivity: {
         events: {
           onClick: {
