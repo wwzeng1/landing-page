@@ -32,8 +32,8 @@ const Testimonial = ({
           <Text color="white">
             {name
               .split(" ")
+              .map((namePart) => namePart.replace(/[^a-zA-Z0-9]/g, '')[0])
               .slice(0, 2)
-              .map((namePart) => namePart[0])
               .join("")}
           </Text>
         </User>
