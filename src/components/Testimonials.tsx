@@ -10,7 +10,7 @@ type TestimonialProps = {
   href: string;
 };
 
-const Testimonial = ({
+export const Testimonial = ({
   children,
   name,
   company,
