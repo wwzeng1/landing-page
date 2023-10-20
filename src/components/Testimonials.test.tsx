@@ -23,7 +23,7 @@ describe('Testimonials', () => {
   });
 
   test('Testimonial component generates correct initials for name with special characters', () => {
-    render(<Testimonial name="Special$ Characters!" company="Company Name" href="https://example.com">Testimonial text</Testimonial>);
+    render(<Testimonials name="Special$ Characters!" company="Company Name" href="https://example.com">Testimonial text</Testimonials>);
     const initials = screen.getByText('SC');
     expect(initials).toBeInTheDocument();
   });
