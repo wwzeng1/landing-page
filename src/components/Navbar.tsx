@@ -48,7 +48,7 @@ export default function NavBar() {
     },
     {
       label: "Buy Sweep Pro",
-      icon: <p>Buy Sweep Pro</p>,
+      icon: <Button colorScheme="green">Buy Sweep Pro</Button>,
       link: "https://buy.stripe.com/fZe03512h99u0AE6os",
     },
   ];
@@ -65,16 +65,20 @@ export default function NavBar() {
           </HStack>
           <ButtonGroup variant="link" display={listDisplay}>
             {navItems.map((item) => (
-              <IconButton
-                key={item.label}
-                icon={item.icon}
-                variant="ghost"
-                aria-label={item.label}
-                onClick={() => {
-                  window.open(item.link, "_blank");
-                }}
-                px={2}
-              />
+              {item.label === "Buy Sweep Pro" ? (
+                item.icon
+              ) : (
+                <IconButton
+                  key={item.label}
+                  icon={item.icon}
+                  variant="ghost"
+                  aria-label={item.label}
+                  onClick={() => {
+                    window.open(item.link, "_blank");
+                  }}
+                  px={2}
+                />
+              )}
             ))}
           </ButtonGroup>
           <Menu>
@@ -103,16 +107,19 @@ export default function NavBar() {
                 <MenuItem backgroundColor="#333">
                   {item.label}
                   {
-                    item.label !== "Buy Sweep Pro" &&
-                    <IconButton
-                      key={item.label}
-                      icon={item.icon}
-                      variant="ghost"
-                      aria-label={item.label}
-                      onClick={() => {
-                        window.open(item.link, "_blank");
-                      }}
-                    />
+                    item.label !== "Buy Sweep Pro" ? (
+                      <IconButton
+                        key={item.label}
+                        icon={item.icon}
+                        variant="ghost"
+                        aria-label={item.label}
+                        onClick={() => {
+                          window.open(item.link, "_blank");
+                        }}
+                      />
+                    ) : (
+                      item.icon
+                    )
                   }
                 </MenuItem>
               ))}
