@@ -139,7 +139,7 @@ export default function Features() {
                             <FaSlack size={40} />
                             <Text mt={4} fontSize="2xl" fontWeight="bold">Preview the plan in Slack</Text>
                             <Text mt={4} fontSize="md" color="lightgrey">Request tests directly in Slack. Review the progress in a thread. Get alerted when a new PR is created.</Text>
-                            <Button colorScheme="purple" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/slack")}>
+                            <Button colorScheme="green" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/slack")}>
                                 Download on Slack
                             </Button>
                         </Box>
