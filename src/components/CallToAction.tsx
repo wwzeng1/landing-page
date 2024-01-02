@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 // @ts-ignore
-// import { Terminal } from "react-window-ui";
 import { FaDiscord, FaGithub } from "react-icons/fa";
 
 import logo from "../assets/icon.png";
@@ -66,7 +65,7 @@ export default function CallToAction() {
         </Button>
         <ExternalLinkWithText
           href="https://discord.gg/sweep-ai" // updated link
-          color="purple.400"
+          color="blue.400"
           mt="0 !important"
           style={{
             display: "flex",
