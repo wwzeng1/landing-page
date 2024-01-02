@@ -64,8 +64,13 @@ export default function CallToAction() {
           <FaGithub />&nbsp;&nbsp;Install Sweep
         </Button>
         <ExternalLinkWithText
+<<<<<<< HEAD
           href="https://discord.gg/sweep-ai" // updated link
           color="blue.400"
+=======
+          href="https://discord.gg/sweep" // updated link
+          color="purple.400"
+>>>>>>> origin/fix/update-discord-link-1
           mt="0 !important"
           style={{
             display: "flex",
