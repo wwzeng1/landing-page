@@ -66,7 +66,7 @@ export default function CallToAction() {
         </Button>
         <ExternalLinkWithText
           href="https://discord.gg/sweep-ai" // updated link
-          color="purple.400"
+          color="orange.400"
           mt="0 !important"
           style={{
             display: "flex",
