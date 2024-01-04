@@ -39,7 +39,7 @@ export default function NavBar() {
     {
       label: "Docs",
       icon: <FaBook />,
-      link: "https://docs.sweep.dev/start",
+      link: "https://docs.sweep.dev",
     },
     {
       label: "Email",
