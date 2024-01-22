@@ -139,7 +139,7 @@ export default function Features() {
                             <FaSlack size={40} />
                             <Text mt={4} fontSize="2xl" fontWeight="bold">Preview the plan in Slack</Text>
                             <Text mt={4} fontSize="md" color="lightgrey">Request tests directly in Slack. Review the progress in a thread. Get alerted when a new PR is created.</Text>
-                            <Button colorScheme="purple" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/slack")}>
+                            <Button colorScheme="green" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/slack")}>
                                 Download on Slack
                             </Button>
                         </Box>
@@ -188,7 +188,7 @@ export default function Features() {
                             <FaSlack size={40} />
                             <Text mt={4} fontSize="2xl" fontWeight="bold">Preview the plan in Slack</Text>
                             <Text mt={4} fontSize="md" color="lightgrey">Request tests directly in Slack. Review the progress in a thread. Get alerted when a new PR is created.</Text>
-                            <Button colorScheme="purple" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/slack")}>
+                            <Button colorScheme="green" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/slack")}>
                                 Download on Slack
                             </Button>
                         </Box>
@@ -254,7 +254,7 @@ export default function Features() {
             <Box display="flex" justifyContent="center" alignItems="center" py={48} bgImage={pills_examples} bgSize="cover">
                 <Box m={8} flexWrap="wrap" justifyContent="space-around" w={{ base: "full", md: "80%" }} textAlign="center">
                     <Text mb={4} fontSize="3xl">See example tickets, handled by Sweep</Text>
-                    <Button colorScheme="purple" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/examples")}>
+                    <Button colorScheme="green" size="md" mt={4} onClick={() => window.open("https://docs.sweep.dev/examples")}>
                         <FaBook />&nbsp;&nbsp;Example Sweep tickets
                     </Button>
                 </Box>
