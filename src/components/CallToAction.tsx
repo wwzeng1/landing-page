@@ -56,8 +56,8 @@ export default function CallToAction() {
           color="white"
           p={6}
           colorScheme={"purple"}
-          bg={"purple.400"}
-          _hover={{ bg: "purple.600" }}
+          bg={"green.400"}
+          _hover={{ bg: "green.600" }}
           onClick={() => window.open("https://github.com/apps/sweep-ai")}
           fontSize={"xl"}
           mb="1rem !important"
