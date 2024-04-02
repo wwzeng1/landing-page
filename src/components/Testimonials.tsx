@@ -10,6 +10,11 @@ type TestimonialProps = {
     href: string
 }
 
+const getInitials = (name: string) => {
+    const splitName = name.split(' ');
+    return splitName.length > 1 ? `${splitName[0][0]}${splitName[1][0]}` : splitName[0][0];
+}
+
 const Testimonial = ({ children, name, company, href }: TestimonialProps): JSX.Element => {
     return (
         <Box
@@ -23,7 +28,7 @@ const Testimonial = ({ children, name, company, href }: TestimonialProps): JSX.E
             borderWidth={1}
         >
             <Flex width="100%" m={2} mb={4}>
-                <User><Text color="white">JE</Text></User>
+                <User><Text color="white">{getInitials(name)}</Text></User>
                 <Box flexGrow={1} textAlign="left" ml={4}>
                     <Text fontWeight="bold">{name}</Text>
                     <ExternalLinkWithText href={href} color="#aaa">{company}</ExternalLinkWithText>
