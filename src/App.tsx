@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import CallToAction from "./components/CallToAction";
 import { Helmet } from "react-helmet";
+import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import ogimage from "./assets/ogimage.png";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
@@ -55,6 +56,7 @@ export const App = () => {
             bgRepeat="no-repeat"
             overflowX="hidden"
           >
+            <Sidebar />
             {false && <ColorModeSwitcher />}
             <Navbar />
             <CallToAction />
